@@ -1,0 +1,23 @@
+Player,Hits,AtBats,PriPos
+Apple,43328,77192,big
+Intel,26921,54135,big
+HPE,37771,51989,big
+Google,26587,46760,big
+Cisco,20344,37526,big
+Salesforce,9795,14716,big
+HP Inc.,10066,13613,big
+Facebook,5819,11241,big
+Adobe,4753,7162,medium
+LinkedIn,3561,6655,medium
+eBay,3486,6611,medium
+Intuit,3204,5911,medium
+Uber,3135,5885,medium
+Nvidia,2294,5348,medium
+Twitter,1730,2952,medium
+Airbnb,1085,1917,small
+Square,1030,1711,small
+Lyft,918,1433,small
+Pinterest,474,944,small
+MobileIron,265,506,small
+View,260,460,small
+23andMe,186,297,small
