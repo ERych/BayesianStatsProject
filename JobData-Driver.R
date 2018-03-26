@@ -19,7 +19,7 @@ graphFileType = "eps"
 # Generate the MCMC chain:
 startTime = proc.time()
 mcmcCoda = genMCMC( data=myData , 
-                    zName="Hits", NName="AtBats", sName="Player", cName="PriPos",
+                    zName="Hires", NName="TotalHires", sName="Company", cName="Size",
                     numSavedSteps=5000 , saveName=fileNameRoot ,
                     thinSteps=20 )
 stopTime = proc.time()
@@ -43,7 +43,7 @@ summaryInfo = smryMCMC( mcmcCoda , compVal=NULL)
                         # compValDiff=0.0 , saveName=fileNameRoot )
 # Display posterior information:
 plotMCMC( mcmcCoda , data=myData , 
-          zName="Hits", NName="AtBats", sName="Player", cName="PriPos",
+          zName="Hires", NName="TotalHires", sName="Company", cName="Size",
           compVal=NULL ,
           diffSList=list( c("Apple","Adobe") ,
                           c("Adobe","Intel") ) , 

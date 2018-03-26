@@ -1,3 +1,4 @@
+
 df <- read.csv("data.csv", stringsAsFactors = FALSE)
 library(dplyr)
 
@@ -15,19 +16,19 @@ hit_list <- df %>%
   filter(gender == "male") %>%
   select("company", "GenTot")
 
-?drop
 
 overall_list <- df %>%
   filter(race == "Overall_totals", job_category=="Totals") %>%
   select("company", "count")
 
-colnames(data)<-c("Company", "Size", "Hits", "AtBats")
 
 data <- inner_join(hit_list, overall_list)
 
 data <- data %>% arrange(desc(count))
 
 data$size <- c(rep("big", 8),rep("medium", 7),rep("small",7))
+
+colnames(data)<-c("Company", "Hires", "TotalHires", "Size")
 
 write.csv(data, "race_data.csv")
 
