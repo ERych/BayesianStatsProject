@@ -48,12 +48,12 @@ genMCMC = function( data , zName="z" , NName="N" , sName="s" , cName="c" ,
       kappa[cIdx] <- kappaMinusTwo[cIdx] + 2
       kappaMinusTwo[cIdx] ~ dgamma( 0.01 , 0.01 ) # mean=1 , sd=10 (generic vague)
     }
-    omegaO ~ dbeta( 1.0 , 1.0 ) 
+    omegaO ~ dbeta( 2.0 , 2.0 ) 
     #omegaO ~ dbeta( 1.025 , 1.075 ) # mode=0.25 , concentration=2.1
     kappaO <- kappaMinusTwoO + 2
-    kappaMinusTwoO ~ dgamma( 0.01 , 0.01 )  # mean=1 , sd=10 (generic vague)
+    #kappaMinusTwoO ~ dgamma( 0.01 , 0.01 )  # mean=1 , sd=10 (generic vague)
     #kappaMinusTwoO ~ dgamma( 1.01005 , 0.01005012 )  # mode=1 , sd=100
-    #kappaMinusTwoO ~ dgamma( 1.105125 , 0.1051249 )  # mode=1 , sd=10
+    kappaMinusTwoO ~ dgamma( 1.105125 , 0.1051249 )  # mode=1 , sd=10
     #kappaMinusTwoO ~ dgamma( 1.105125 , 0.01051249 )  # mode=10 , sd=100
   }
   " # close quote for modelString
